@@ -717,10 +717,10 @@ const Team = () => {
               exit={{ scale: 0.94, opacity: 0, y: 30 }}
               transition={{ type: "spring", stiffness: 350, damping: 28 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-w-[920px] w-full bg-[#111411] border border-white/[0.08] rounded-[28px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col md:flex-row relative my-auto max-h-[90vh] md:max-h-[85vh]"
+              className="max-w-[1100px] w-full bg-[#111411] border border-white/[0.08] rounded-[28px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col md:flex-row relative my-auto max-h-[90vh] md:max-h-[85vh] min-h-[500px]"
             >
-              {/* Left: Portrait (45%) */}
-              <div className="w-full md:w-[45%] h-72 sm:h-80 md:h-auto relative bg-[#0a0d0a] min-h-[280px] shrink-0">
+              {/* Left: Portrait (40%) */}
+              <div className="w-full md:w-[40%] h-72 sm:h-80 md:h-auto relative bg-[#0a0d0a] min-h-[300px] md:min-h-[500px] shrink-0">
                 {selectedMember.photo && selectedMember.photo.trim() !== "" ? (
                   <>
                     <img
@@ -745,8 +745,8 @@ const Team = () => {
                 <div className="hidden md:block absolute top-8 bottom-8 right-0 w-[1px] bg-gradient-to-b from-transparent via-[#B89B5E]/30 to-transparent"></div>
               </div>
 
-              {/* Right: Content (55%) */}
-              <div className="w-full md:w-[55%] p-7 sm:p-9 md:p-11 flex flex-col justify-between relative overflow-y-auto">
+              {/* Right: Content (60%) */}
+              <div className="w-full md:w-[60%] p-7 sm:p-9 md:p-12 lg:p-14 flex flex-col justify-between relative overflow-y-auto">
                 {/* Close */}
                 <button
                   onClick={() => setSelectedMember(null)}

@@ -102,38 +102,38 @@ const SITE_CONTENT = {
       education: "M.Sc.",
       initials: "GR",
       photo: "content/photos/team/govind.jpg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/govind-rajput-602884255/",
       github: "#",
       twitter: "#",
-      email: "mailto:[EMAIL_ADDRESS]",
-      desc: "Computational Genomics & HPC"
+      email: "mailto:govind.mangropa_phd26@ashoka.edu.in",
+      desc: "Research Interests: Computational Genomics, High-Performance Computing (HPC), Precision Health, Precision Medicine, and Bioinformatics."
     },
 
     {
       name: "Sourav Sangam Mohanty",
       role: "Research Assistant",
-      education: "M.Sc.",
+      education: "M.Sc. Bioinformatics",
       initials: "SSM",
-      photo: "content/photos/team/ssm.jpeg",   // e.g. "content/photos/team/joydeep.jpg"
-      linkedin: "#",
-      github: "#",
-      twitter: "#",
-      email: "mailto:[EMAIL_ADDRESS]",
-      desc: "Assisting in lab operations, data processing pipelines, and maintaining genomics computational infrastructure."
+      photo: "content/photos/team/ssm.jpeg",
+      linkedin: "https://www.linkedin.com/in/souravsangammohanty/",
+      github: "https://github.com/SouravSangamMohanty",
+      twitter: "https://bsky.app/profile/souravsmohanty.bsky.social",
+      email: "mailto:sourav.mohanty@ashoka.edu.in ",
+      desc: "Applying functional genomics and multi-omics approaches to decode complex disease mechanisms, advancing precision health through computational genomics and integrative bioinformatics."
     },
 
 
     {
-      name: "Khusi Rana",
-      role: "Research Assistant",
-      education: "M.Sc.",
+      name: "Khushi Rani",
+      role: "Junior Research Fellow",
+      education: "M.Sc.Computational Integrative Sciences",
       initials: "KR",
-      photo: "content/photos/team/khusi.jpg",   // e.g. "content/photos/team/joydeep.jpg"
-      linkedin: "#",
-      github: "#",
+      photo: "content/photos/team/khusi.jpg",
+      linkedin: "https://www.linkedin.com/in/khushirani9/",
+      github: "https://github.com/khushirani9/",
       twitter: "#",
-      email: "mailto:[EMAIL_ADDRESS]",
-      desc: "Assisting in lab operations, data processing pipelines, and maintaining genomics computational infrastructure."
+      email: "mailto:khushirani987123@gmail.com",
+      desc: "Junior Research Fellow working at the intersection of statistical genomics and precision medicine, with a focus on advancing genomic research for Indian populations."
     },
 
 
