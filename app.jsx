@@ -615,7 +615,7 @@ const TeamCard = ({ member, delay, idx, onSelect }) => {
         </div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 via-[38%] to-black/5 group-hover:from-black/90 transition-all duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 via-[28%] to-transparent group-hover:from-black/85 transition-all duration-500"></div>
 
         {/* Gold top accent — animates on hover */}
         <div className="absolute top-0 left-0 right-0 h-[2px] z-10">
@@ -623,7 +623,7 @@ const TeamCard = ({ member, delay, idx, onSelect }) => {
         </div>
 
         {/* Frosted bottom bar */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm bg-black/20 border-t border-white/[0.06] p-5 md:p-6">
+        <div className="absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm bg-black/20 border-t border-white/[0.06] p-4">
           {/* Role & Education */}
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
             <span className="inline-block text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[#B89B5E] font-sans">
@@ -640,7 +640,7 @@ const TeamCard = ({ member, delay, idx, onSelect }) => {
           </div>
 
           {/* Name */}
-          <h4 className="font-serif text-[1.35rem] md:text-[1.65rem] text-white font-medium leading-tight tracking-wide truncate">
+          <h4 className="font-serif text-[1.2rem] md:text-[1.45rem] text-white font-medium leading-tight tracking-wide truncate">
             {member.name}
           </h4>
 
