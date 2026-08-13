@@ -87,53 +87,50 @@ const SITE_CONTENT = {
     {
       name: "Joydeep",
       role: "Research Scholar",
-      education: "M.Sc",
+      education: "",
       initials: "J",
       photo: "content/photos/team/joydeep.jpg",   // e.g. "content/photos/team/joydeep.jpg"
       linkedin: "#",
       github: "#",
       twitter: "#",
       email: "mailto:joydeep.das_phd25@ashoka.edu.in",
-      desc: "Investigating the genetic basis of complex traits using integrative multi-omics and advanced statistical models."
+      desc: "M.Sc. Human Genetics, Banaras Hindu University, Varanasi."
     },
     {
       name: "Govind Rajput",
       role: "Research Assistant",
-      education: "M.Sc.",
+      education: "",
       initials: "GR",
       photo: "content/photos/team/govind.jpg",
       linkedin: "https://www.linkedin.com/in/govind-rajput-602884255/",
       github: "#",
       twitter: "#",
       email: "mailto:govind.mangropa_phd26@ashoka.edu.in",
-      desc: "Research Interests: Computational Genomics, High-Performance Computing (HPC), Precision Health, Precision Medicine, and Bioinformatics."
+      desc: "M.Sc. Bioinformatics, Savitribai Phule Pune University, Bioinformatics Centre, Pune."
     },
-
     {
       name: "Sourav Sangam Mohanty",
       role: "Research Assistant",
-      education: "M.Sc. Bioinformatics",
+      education: "",
       initials: "SSM",
       photo: "content/photos/team/ssm.jpeg",
       linkedin: "https://www.linkedin.com/in/souravsangammohanty/",
       github: "https://github.com/SouravSangamMohanty",
       twitter: "https://bsky.app/profile/souravsmohanty.bsky.social",
-      email: "mailto:sourav.mohanty@ashoka.edu.in ",
-      desc: "Applying functional genomics and multi-omics approaches to decode complex disease mechanisms, advancing precision health through computational genomics and integrative bioinformatics."
+      email: "mailto:sourav.mohanty@ashoka.edu.in",
+      desc: "M.Sc. Bioinformatics, Central University of Punjab, Bathinda."
     },
-
-
     {
       name: "Khushi Rani",
       role: "Junior Research Fellow",
-      education: "M.Sc.Computational Integrative Sciences",
+      education: "",
       initials: "KR",
       photo: "content/photos/team/khusi.jpg",
       linkedin: "https://www.linkedin.com/in/khushirani9/",
       github: "https://github.com/khushirani9/",
       twitter: "#",
       email: "mailto:khushirani987123@gmail.com",
-      desc: "Junior Research Fellow working at the intersection of statistical genomics and precision medicine, with a focus on advancing genomic research for Indian populations."
+      desc: "Computational Integrative Sciences, Jawaharlal Nehru University, New Delhi."
     },
 
 
@@ -162,6 +159,18 @@ const SITE_CONTENT = {
       title: "",
       description: "",
       date: "Oct 28, 2025"
+    },
+    {
+      image: "content/photos/glimpse/1000808021.jpg",
+      title: "",
+      description: "",
+      date: "july 31"
+    },
+    {
+      image: "content/photos/glimpse/1000808021 copy.jpg",
+      title: "",
+      description: "",
+      date: "july 31 2026"
     }
   ],
 
@@ -174,7 +183,7 @@ const SITE_CONTENT = {
     scholarUrl: "https://scholar.google.com/citations?user=zogNrkQAAAAJ",
     categories: [
       {
-        name: "Cardiovascular, Metabolic & Lung Disease Genomics",
+        name: "Cardiovascular, Metabolic & Pulmonary Disease Genomics",
         papers: [
           { num: 1, authors: "Th\u00e9riault S, Holdcraft J, Sharipova D, ... Roychowdhury T, ... Body S", title: "Genome and transcriptome-wide analyses identify multiple candidate genes and a significant polygenic contribution in bicuspid aortic valve", journal: "Circulation", year: 2025, pmid: "41645906" },
           { num: 2, authors: "Kelemen M, Danesh J, Di Angelantonio E, Inouye M, O'Sullivan J, Pennells L, Roychowdhury T, Sweeting MJ, Wood AM, Harrison S, Kim LG", title: "Evaluating the cost-effectiveness of polygenic risk score-stratified screening for abdominal aortic aneurysm", journal: "Nature Communications", year: 2024, pmid: "39277617" },
