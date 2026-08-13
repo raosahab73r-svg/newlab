@@ -256,12 +256,12 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
-            className="lg:col-span-5 relative flex items-center justify-center w-full min-h-[400px] md:min-h-[500px] lg:min-h-[650px] h-full"
+            className="lg:col-span-5 relative flex items-center justify-center w-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[650px] h-full"
             style={{ transform: 'translateY(-80px)' }}
           >
             {/* New People DNA Illustration (Center offset to avoid overlap) */}
             <div
-              className="absolute w-[130%] h-[130%] flex items-center justify-center pointer-events-none"
+              className="absolute w-full sm:w-[130%] h-full sm:h-[130%] flex items-center justify-center pointer-events-none"
               style={{ zIndex: 5, transform: 'translateX(-12%) translateY(0%)' }}
             >
               <img
@@ -277,8 +277,8 @@ const Hero = () => {
             </div>
             {/* DNA helix */}
             <div
-              className="relative w-full h-full flex items-center justify-center pointer-events-none"
-              style={{ zIndex: 15, transform: 'scale(2.4)', transformOrigin: 'center center', maxWidth: '1000px' }}
+              className="hero-dna-helix relative w-full h-full flex items-center justify-center pointer-events-none"
+              style={{ zIndex: 15, transformOrigin: 'center center', maxWidth: '1000px' }}
             >
               <img
                 src="hero_genomics.png"
@@ -591,7 +591,7 @@ const TeamCard = ({ member, delay, idx, onSelect }) => {
     >
       <div
         onClick={onSelect}
-        className="group relative h-[420px] md:h-[480px] rounded-[22px] overflow-hidden cursor-pointer border border-white/[0.06] hover:border-[#B89B5E]/40 shadow-[0_8px_30px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] transition-all duration-500 hover:-translate-y-3"
+        className="group relative h-[360px] sm:h-[420px] md:h-[480px] rounded-[22px] overflow-hidden cursor-pointer border border-white/[0.06] hover:border-[#B89B5E]/40 shadow-[0_8px_30px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] transition-all duration-500 hover:-translate-y-3"
       >
         {/* Full Photo Background */}
         <div className="absolute inset-0 w-full h-full">
@@ -856,9 +856,10 @@ const GlimpseDeck = ({ items }) => {
   if (validItems.length === 0) return null;
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center h-[550px] md:h-[750px] lg:h-[850px]">
+    <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center h-[400px] sm:h-[550px] md:h-[750px] lg:h-[850px]">
       {validItems.map((item, i) => {
-        const spread = 15; // Rotation spread in degrees
+        const isMobile = window.innerWidth < 640;
+        const spread = isMobile ? 8 : 15; // Rotation spread in degrees
         const offset = i - centerIdx; // Distance from the currently centered item
         const rotation = offset * spread;
         const isActive = i === centerIdx;
@@ -873,15 +874,14 @@ const GlimpseDeck = ({ items }) => {
             className="absolute cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]"
             style={{
               zIndex: zIndex,
-              transform: isActive 
-                ? 'scale(1.15) translateY(-30px)' 
-                : `translateX(${offset * 110}px) translateY(${Math.abs(offset) * 20}px) rotate(${rotation}deg) scale(${1 - Math.abs(offset) * 0.08})`,
+              transform: isActive                 ? `scale(${isMobile ? 1.05 : 1.15}) translateY(${isMobile ? -15 : -30}px)` 
+                : `translateX(${offset * (isMobile ? 50 : 110)}px) translateY(${Math.abs(offset) * (isMobile ? 10 : 20)}px) rotate(${rotation}deg) scale(${1 - Math.abs(offset) * (isMobile ? 0.12 : 0.08)})`,
             }}
           >
             {/* Polaroid Wrapper */}
-            <div className={`bg-white p-4 md:p-5 pb-12 md:pb-16 rounded shadow-[0_15px_35px_-10px_rgba(0,0,0,0.25)] transition-shadow duration-500 border border-stone-200/50 flex flex-col ${isActive ? 'shadow-[0_30px_60px_-15px_rgba(0,0,0,0.45)]' : 'hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.35)]'}`}>
+            <div className={`bg-white p-2.5 sm:p-4 md:p-5 pb-8 sm:pb-12 md:pb-16 rounded shadow-[0_15px_35px_-10px_rgba(0,0,0,0.25)] transition-shadow duration-500 border border-stone-200/50 flex flex-col ${isActive ? 'shadow-[0_30px_60px_-15px_rgba(0,0,0,0.45)]' : 'hover:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.35)]'}`}>
               
-              <div className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-[4/3] bg-stone-100 overflow-hidden relative">
+              <div className="w-[200px] sm:w-[300px] md:w-[500px] lg:w-[600px] aspect-[4/3] bg-stone-100 overflow-hidden relative">
                 <img
                   src={item.image}
                   alt={item.title || `Lab glimpse ${i + 1}`}
@@ -897,7 +897,7 @@ const GlimpseDeck = ({ items }) => {
                   {item.description && <p className="font-serif italic text-xs md:text-sm text-stone-500 mt-1.5 text-center">{item.description}</p>}
                   {item.date && (
                     <div className="mt-2 md:mt-4 text-center">
-                       <span className="font-handwriting font-bold text-xl md:text-3xl text-blue-800/90 inline-block -rotate-2">{item.date}</span>
+                       <span className="font-handwriting font-bold text-base sm:text-xl md:text-3xl text-blue-800/90 inline-block -rotate-2">{item.date}</span>
                     </div>
                   )}
                 </div>

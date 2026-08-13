@@ -9,6 +9,23 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 639px) {
+  .diamond-divider {
+    margin: 2rem 0;
+  }
+  .diamond-divider::before, .diamond-divider::after {
+    width: 50px;
+  }
 }
 
 /* Custom Webkit Scrollbar */
@@ -98,4 +115,19 @@ html {
 }
 .animate-base-glow {
   animation: basePairGlow 4s ease-in-out infinite;
+}
+
+/* Responsive hero DNA helix scaling */
+.hero-dna-helix {
+  transform: scale(1.4);
+}
+@media (min-width: 640px) {
+  .hero-dna-helix {
+    transform: scale(2.0);
+  }
+}
+@media (min-width: 1024px) {
+  .hero-dna-helix {
+    transform: scale(2.4);
+  }
 }
